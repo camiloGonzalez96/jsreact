@@ -1,22 +1,26 @@
-import React,{useState} from 'react';
-import PropTypes from 'prop-types';
+import react, { useState } from 'react'
+import PropTypes from 'prop-types'
 
-const Contador = ({time}) =>{
-    const [num, setNum] = useState(time);
-    return(
+const Contador = ({propNum}) => {
+    const [cuenta, setCuenta] = useState(propNum);
+
+    return (
         <>
-            <h1>Contador</h1>
-            <p>El contador esta en {num}</p>
-
-            <button id='suma' onClick={() => setNum(num + 1)}>Sumar</button>
-            <button id='resta' onClick={() => setNum(num - 1)}>Restar</button>
-            <button id='borrar' onClick={() => setNum(0)}>Borrar</button>
+        <p>HOLA SOY CONTADOR Fredy</p>
+        <h1>HOLA SOY FREDY</h1>
+        <h2>{cuenta}</h2>
+        <button onClick={( () => setCuenta(cuenta + 1))} > ¡Más!</button>
+        <button onClick={( () => setCuenta(cuenta - 1))} > ¡Menos!</button>
+        <br/>
+        <br/>
+        <button onClick={( () => setCuenta(propNum))} > ¡Reset!</button>
+       
         </>
     )
 }
 
-Contador.propTypes ={
-    time: PropTypes.number.isRequired
+Contador.propTypes = {
+    propNum: PropTypes.number.isRequired
 }
 
-export default Contador
+export default Contador;

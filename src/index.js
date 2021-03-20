@@ -1,12 +1,8 @@
+//Leonardo Bolaños García 1826808
+import Contador from './contador'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-//Juan Camilo Gonzalez 1735277-2711
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PrimerCompon from './PrimerCompon'
+const divRoot = document.querySelector('#root');
 
-
-
-const divRoot = document.querySelector('#root')
-ReactDOM.render(<PrimerCompon primerProp/>, divRoot)
-//ReactDOM.render(<React.StrictMode><PrimerCompon inicio={0}/></React.StrictMode>,document.querySelector('#root'))
-
+ReactDOM.render(<Contador name="Leonardo Bolaños" propNum={10} />, divRoot);
